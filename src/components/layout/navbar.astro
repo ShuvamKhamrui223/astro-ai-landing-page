@@ -1,0 +1,56 @@
+---
+import { ArrowRightToLine } from "@lucide/astro";
+import { header } from "@/data/site.content.json";
+const { logo, menu } = header;
+---
+
+<nav class="container px-4 py-8 mx-auto flex items-center justify-between">
+  <h4 class="text-2xl font-bold font-montserrat text-zinc-300">{logo}</h4>
+  <button
+    id="sidebarOpener"
+    class="shadow-lg bg-zinc-700 cursor-pointer hover:bg-zinc-600 hover:drop-shadow-sm shadow-zinc-950 p-4"
+  >
+    <ArrowRightToLine class="text-zinc-300 stroke-1 hover:text-zinc-200" />
+  </button>
+</nav>
+<aside
+  id="sidebar"
+  class="fixed hidden items-center top-0 -right-full z-30 transition-discrete duration-500 bg-zinc-800 h-full pl-16"
+>
+  <button
+    class="absolute top-[5%] -left-5 shadow-lg bg-zinc-700 cursor-pointer hover:bg-zinc-600 hover:text-zinc-200 hover:drop-shadow-sm shadow-zinc-950 p-4"
+    id={"sidebarClose"}
+  >
+    <ArrowRightToLine class="text-gray-300" size={30} />
+  </button>
+
+  <ul class="space-y-14">
+    {
+      menu.map((item) => (
+        <li class="text-3xl capitalize text-zinc-400 font-semibold transition-colors duration-200 hover:text-zinc-200">
+          <a href={item.url} class="">
+            {item.label}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</aside>
+
+<script>
+  const sidebar = document.getElementById("sidebar");
+  const sidebarOpener = document.getElementById("sidebarOpener");
+  const sidebarClose = document.getElementById("sidebarClose");
+  const sidebarMenuItem = document.querySelectorAll("#sidebar > ul > li > a");
+
+  sidebarOpener?.addEventListener("click", () =>
+    sidebar?.classList.add("open")
+  );
+  sidebarClose?.addEventListener("click", () =>
+    sidebar?.classList.remove("open")
+  );
+
+  sidebarMenuItem.forEach((item) =>
+    item?.addEventListener("click", () => sidebar?.classList.remove("open"))
+  );
+</script>

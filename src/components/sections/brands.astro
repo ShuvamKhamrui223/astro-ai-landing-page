@@ -1,0 +1,22 @@
+---
+import { brands } from "@/data/site.content.json";
+import { Image } from "astro:assets";
+---
+
+<section class="mt-10 flex items-center justify-center mx-auto container">
+  <ul class="w-full flex items-center gap-8 p-12 overflow-hidden">
+    {
+      brands.map((brand) => (
+        <li class="flex-none basis-40 md:basis-60 animate-auto-scroll hover:scale-110 transition-transform duration-200">
+          <Image
+            src={brand}
+            alt={brand}
+            height={50}
+            width={100}
+            class={"w-40"}
+          />
+        </li>
+      ))
+    }
+  </ul>
+</section>

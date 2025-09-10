@@ -1,0 +1,23 @@
+---
+// import ribbon from "/images/ribbon.png";
+import { cta } from "@/data/site.content.json";
+import { Image } from "astro:assets";
+const { buttonPlaceholder, description, heading, backgroundImage } = cta;
+---
+
+<section
+  class="relative inline-padding py-24 bg-radial-[at_20%_100%] from-emerald-600 to-zinc-800 md:bg-gradient-to-r md:from-zinc-800 md:from-30% md:to-emerald-700 rounded-3xl flex flex-col gap-4 overflow-hidden"
+>
+  <Image
+    src={backgroundImage}
+    alt="ribbon"
+    height={300}
+    width={300}
+    class={"absolute right-0 top-0 blur-sm md:blur-none scale-[2] mix-blend-overlay rotate-90"}
+  />
+  <h2 class="text-5xl max-w-[15ch]" set:html={heading} />
+  <p class="text-zinc-200! first-letter:uppercase">{description}</p>
+  <a href="" class="bg-emerald-600 text-zinc-200 px-8 py-3 text-lg w-fit"
+    >{buttonPlaceholder}</a
+  >
+</section>

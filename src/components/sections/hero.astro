@@ -1,0 +1,49 @@
+---
+import { hero_section } from "@/data/site.content.json";
+import { Image } from "astro:assets";
+
+const { title, ctaLink, description, hero_img } = hero_section;
+---
+
+<section
+  class={`min-h-[40rem] w-full container mx-auto px-4 sm:px-0 relative rounded-3xl flex flex-col gap-4 items-center justify-center overflow-hidden bg-radial-[at_90%_10%] md:bg-radial-[at_50%_120%] to-emerald-500`}
+>
+  <Image
+    src={hero_img.url}
+    width={500}
+    height={500}
+    alt={hero_img.alternativeText}
+    class={"absolute -bottom-28 -left-20 sm:right-0 sm:-bottom-28 mix-blend-lighten md:scale-[2] -z-30"}
+  />
+  <Image
+    src={hero_img.url}
+    width={500}
+    height={500}
+    alt={hero_img.alternativeText}
+    class={"absolute -top-28 -right-20 sm:-bottom-28 sm:right-0"}
+  />
+  <h1
+    class="text-center text-4xl lg:text-8xl max-w-[15ch] font-light text-zinc-100 capitalize"
+    set:html={title}
+  />
+  <p class="text-zinc-300! text-lg text-center max-w-[45ch] mt-4">
+    {description}
+  </p>
+
+  <ul class="flex flex-col md:flex-row items-center gap-10 mt-10">
+    {
+      ctaLink.map((cl) => (
+        <li>
+          <a
+            href={cl.url}
+            class={`capitalize ${cl.style === "primary" && "bg-emerald-600 text-zinc-200 px-12 py-4"}
+            ${cl.style === "secondary" && "text-emerald-200 md:text-emerald-500 underline underline-offset-4"}
+            `}
+          >
+            {cl.label}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</section>

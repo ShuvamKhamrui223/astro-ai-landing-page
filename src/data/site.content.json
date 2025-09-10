@@ -1,0 +1,141 @@
+{
+  "header": {
+    "logo": "CONSCIENCE",
+    "menu": [
+      { "label": "home", "url": "#home" },
+      { "label": "services", "url": "#services" },
+      { "label": "pricing", "url": "#pricing" },
+      { "label": "blog", "url": "#blog" }
+    ]
+  },
+  "hero_section": {
+    "title": "your ai-powered <span>design</span> assitant",
+    "description": "Tailor-made strategies to address your unique business challenges and opportunities, ensuring sustainable growth and competitive advantage.",
+    "ctaLink": [
+      {
+        "label": "Get Started",
+        "url": "#services",
+        "style": "primary"
+      },
+      {
+        "label": "checkout pricing",
+        "url": "#pricing",
+        "style": "secondary"
+      }
+    ],
+    "hero_img": {
+      "url": "/images/glass-star.png",
+      "alternativeText": "a glass star"
+    }
+  },
+  "brands": [
+    "/images/logo-clouds-1.svg",
+    "/images/logo-clouds-2.svg",
+    "/images/logo-clouds-3.svg",
+    "/images/logo-clouds-4.svg",
+    "/images/logo-light-1.svg",
+    "/images/logo-light-2.svg",
+    "/images/logo-light-3.svg",
+    "/images/logo-light-4.svg",
+    "/images/logo-light-5.svg",
+    "/images/logo-light-6.svg"
+  ],
+  "services_section": {
+    "heading": "unleash your <span>creativity</span>",
+    "description": "discover how our Ai-Powered Design Assistant transforms your ideas into stunning designs effortlessly. follow this simple steps to turn your vision into reality.",
+    "services": [
+      {
+        "title": "upload brief",
+        "icon": "CloudUpload",
+        "description": "Tailor-made strategies to address your unique business challenges and opportunities, ensuring sustainable growth and competitive advantage."
+      },
+      {
+        "title": "generate design",
+        "icon": "Wand",
+        "description": "Streamline your processes and improve efficiency with our expert guidance, helping you save time and resources."
+      },
+      {
+        "title": "refine creation",
+        "icon": "BrushCleaning",
+        "description": "Gain valuable market insights and stay ahead of the competition with comprehensive analysis and data-driven recommendations."
+      }
+    ]
+  },
+  "pricing_section": {
+    "heading": "affordable plans for <span>every need</span>",
+    "description": "choose the perfect plan for your design projects, from startups to enterrprises. Our pricing tiers are designed to offer flexibillity and value, ensuring you get the most out of our Ai-powered design assistant",
+    "plans": [
+      {
+        "plan_name": "free",
+        "plan_price": 0,
+        "billing_cycle": "monthly",
+        "isRecommended": false,
+        "availaable_features": [
+          "basic ai-generated designs",
+          "access to customization tools",
+          "standard template library",
+          "5 projects per month"
+        ]
+      },
+      {
+        "plan_name": "basic",
+        "plan_price": 16,
+        "billing_cycle": "monthly",
+        "isRecommended": true,
+        "availaable_features": [
+          "advanced ai-generated designs",
+          "full access to customization tools",
+          "premium template library",
+          "unlimited projects",
+          "realtime collaboration",
+          "priority email support"
+        ]
+      },
+      {
+        "plan_name": "pro",
+        "plan_price": 35,
+        "billing_cycle": "monthly",
+        "isRecommended": false,
+        "availaable_features": [
+          "all features included in pro plan",
+          "dedicated account manager",
+          "custom ai solutions adn designs",
+          "onboarding and training sessions",
+          "24/7 support",
+          "advanced analytics and reporting",
+          "secure clound storage"
+        ]
+      }
+    ]
+  },
+  "blogs_section": {
+    "heading": "stay inpsired with our latest <span>insights</span>",
+    "description": "dive into our blogs for the latest trends, tips and insights in the world of design and ai technology. Wheather you loooking for isnpiration tutorials or industry news, our articles are crafted to keep you informed and inspired.",
+    "blogs": [
+      {
+        "title": "starting and growing career in web design",
+        "publish_date": "mar 5, 24",
+        "time_to_read": "3",
+        "cover_img": "/images/circle-glass.jpeg"
+      },
+      {
+        "title": "create a landing page that performs great",
+        "publish_date": "apr 15, 24",
+        "time_to_read": "7",
+        "cover_img": "/images/circle-glass.jpeg"
+      },
+      {
+        "title": "how can designer prepare for future",
+        "publish_date": "feb 10, 24",
+        "time_to_read": "10",
+        "cover_img": "/images/circle-glass.jpeg"
+      }
+    ]
+  },
+  "cta": {
+    "heading": "start your design <span>journey</span> today",
+    "description": "signup now and experience the ai-driven design without any commitment",
+    "buttonPlaceholder": "get started",
+    "backgroundImage": "/images/ribbon.png"
+  }
+}

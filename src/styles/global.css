@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  /* // Elegant & Professional (Option 1) */
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-tomorrow: "Tomorrow", sans-serif;
+}
+
+/* * {
+  outline: 0.1px solid red;
+} */
+
+.inline-padding {
+  @apply px-6 md:px-[8%];
+}
+
+.block-padding {
+  @apply py-20;
+}
+
+h1,
+h2 {
+  @apply text-zinc-100 capitalize;
+}
+
+h2 {
+  @apply text-5xl text-zinc-200 max-w-[15ch];
+}
+
+h1 > span,
+h2 > span {
+  @apply text-emerald-400;
+}
+
+p {
+  @apply max-w-[65ch] text-zinc-400;
+}
+
+.animate-auto-scroll {
+  animation: auto-scroll 5s linear infinite;
+}
+
+@keyframes auto-scroll {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
+.open {
+  @apply w-10/12 sm:w-3/6 md:w-4/12 xl:w-3/12 flex right-0;
+}
