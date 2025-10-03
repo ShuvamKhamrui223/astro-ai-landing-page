@@ -1,0 +1,23 @@
+---
+import LucideIcon from "../lucide-icon.astro";
+
+interface Props {
+  service: { title: string; icon: string; description: string };
+}
+
+const { service } = Astro.props;
+---
+
+<li
+  class="bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-800 px-8 py-10 dark:hover:bg-zinc-700 transition-all duration-200 hover:scale-105 group"
+>
+  <div class="p-2.5 bg-emerald-700 text-zinc-100 w-fit rounded-full mb-2">
+    <LucideIcon name={service.icon} />
+  </div>
+  <h4
+    class="text-zinc-700 dark:text-zinc-100 text-2xl font-semibold capitalize mb-3"
+  >
+    {service.title}
+  </h4>
+  <p class="">{service.description}</p>
+</li>

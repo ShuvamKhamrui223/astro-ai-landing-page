@@ -1,0 +1,39 @@
+---
+import type { GetStaticPaths } from "astro";
+import Heading from "@/components/heading.astro";
+import { getCollection } from "astro:content";
+import { render } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { slugify } from "@/utils/formatter";
+import BlogLayout from "@/layouts/blog-layout.astro";
+import { Image } from "astro:assets";
+
+export const getStaticPaths = async () => {
+  const blogs = await getCollection("blog");
+
+  return blogs.map((blog) => ({
+    params: { blogId: slugify(blog.data.title) },
+    props: { blog },
+  }));
+};
+
+const { blog } = Astro.props;
+const { Content } = await render(blog);
+---
+
+<BaseLayout title={blog.data.title} description={blog.data.description}>
+  <BlogLayout>
+    {
+      blog.data.heroImage && (
+        <Image
+          src={blog.data.heroImage}
+          alt={blog.data.title}
+          height={300}
+          width={1280}
+          class={"rounded-2xl md:h-[40rem] object-cover "}
+        />
+      )
+    }
+    <Content />
+  </BlogLayout>
+</BaseLayout>

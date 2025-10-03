@@ -1,0 +1,41 @@
+---
+import { CheckCheckIcon } from "@lucide/astro";
+interface Plan {
+  plan_name: string;
+  plan_price: number;
+  billing_cycle: string;
+  isRecommended: boolean;
+  availaable_features: string[];
+}
+interface Props {
+  plan: Plan;
+}
+const { plan } = Astro.props;
+---
+
+<li class={`pricing-card ${plan.isRecommended && "recommended"}`}>
+  <strong class="">
+    {plan.plan_name}
+  </strong>
+  <h4 class="">
+    ${plan.plan_price}/mo
+  </h4>
+
+  <ul class="space-y-2.5 my-6">
+    {
+      plan.availaable_features.map((af) => (
+        <li class="available__features">
+          <CheckCheckIcon class="text-zinc-300" />
+          <span class="first-letter:uppercase">{af}</span>
+        </li>
+      ))
+    }
+  </ul>
+
+  <a
+    href="/"
+    class={`text-lg get__started_link outline-1 capitalize py-2 px-4 justify-self-end w-full text-center`}
+  >
+    get started
+  </a>
+</li>

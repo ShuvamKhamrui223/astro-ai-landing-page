@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @theme {
   /* // Elegant & Professional (Option 1) */
@@ -21,22 +22,24 @@
 
 h1,
 h2 {
-  @apply text-zinc-100 capitalize;
+  @apply text-zinc-800 dark:text-zinc-100 capitalize;
 }
 
-h2 {
-  @apply text-5xl text-zinc-200 max-w-[15ch];
+.site__heading {
+  @apply text-5xl text-zinc-800 dark:text-zinc-200 max-w-[15ch];
 }
 
 h1 > span,
 h2 > span {
-  @apply text-emerald-400;
+  @apply text-emerald-600 dark:text-emerald-400;
 }
 
 p {
-  @apply max-w-[65ch] text-zinc-400;
+  @apply max-w-[65ch] text-zinc-500 dark:text-zinc-400;
 }
-
+div:has(.prose) {
+  @apply !text-zinc-600;
+}
 .animate-auto-scroll {
   animation: auto-scroll 5s linear infinite;
 }
@@ -53,4 +56,42 @@ p {
 
 .open {
   @apply w-10/12 sm:w-3/6 md:w-4/12 xl:w-3/12 flex right-0;
+}
+
+.pricing-card {
+  @apply py-14 px-8 flex flex-col justify-center dark:bg-zinc-800 scale-y-90;
+  strong {
+    @apply text-zinc-700 dark:text-zinc-100 font-bold capitalize;
+  }
+  h4 {
+    @apply text-3xl dark:text-zinc-300 my-2 font-bold;
+  }
+  .available__features {
+    @apply text-gray-600 dark:text-gray-300 flex items-center gap-2.5;
+  }
+  svg.lucide-check-check {
+    @apply text-zinc-800 dark:text-gray-400;
+  }
+  .get__started_link {
+    @apply outline-emerald-800 dark:text-zinc-100;
+  }
+}
+.pricing-card.recommended {
+  @apply bg-emerald-600 outline-2 outline-emerald-700 scale-100;
+
+  strong {
+    @apply text-zinc-100 font-bold capitalize;
+  }
+  h4 {
+    @apply text-3xl text-zinc-200 my-2 font-bold;
+  }
+  .available__features {
+    @apply text-gray-200 flex items-center gap-2.5;
+  }
+  svg.lucide-check-check {
+    @apply text-zinc-200;
+  }
+  .get__started_link {
+    @apply outline-transparent bg-emerald-100 text-emerald-600;
+  }
 }

@@ -1,0 +1,33 @@
+---
+import type { GetStaticPaths } from "astro";
+import BlogCard from "@/components/cards/blog-card.astro";
+import Heading from "@/components/heading.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Pagination from "@/components/pagination.astro";
+import { getCollection } from "astro:content";
+
+export const getStaticPaths = (async ({ paginate }) => {
+  const blogs = await getCollection("blog");
+
+  return paginate(blogs, { pageSize: 10 });
+}) satisfies GetStaticPaths;
+const {
+  page: { data: blogs, currentPage, end, lastPage, size, start, total, url },
+} = Astro.props;
+---
+
+<BaseLayout
+  title="blogs"
+  description="find curated articles about design and tech"
+>
+  <Heading level={3} title="blogs" />
+  <section
+    class="md:px-6 my-6 grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+  >
+    {blogs.map((blog) => <BlogCard blog={blog} />)}
+  </section>
+
+  <Pagination
+    paginationInfo={{ currentPage, end, lastPage, size, start, total, url }}
+  />
+</BaseLayout>

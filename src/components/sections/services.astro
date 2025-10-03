@@ -1,27 +1,16 @@
 ---
 import { services_section } from "@/data/site.content.json";
 import LucideIcon from "../lucide-icon.astro";
+import ServiceCard from "../cards/service-card.astro";
 
 const { description, heading, services } = services_section;
 ---
 
 <section class="block-padding px-4 md:px-0" id="services">
-  <h2 class="text-5xl" set:html={heading} />
+  <h2 class="text-5xl site__heading" set:html={heading} />
   <p class="text-lg mt-4 first-letter:uppercase">{description}</p>
 
   <ul class="grid grid-rows-1s md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
-    {
-      services.map((serv) => (
-        <li class="bg-zinc-800 px-8 py-10 hover:bg-zinc-700 transition-all duration-100  hover:scale-105 group">
-          <div class="p-2.5 bg-emerald-700 text-zinc-100 w-fit rounded-full mb-2">
-            <LucideIcon name={serv.icon} />
-          </div>
-          <h4 class="text-zinc-100 text-2xl font-semibold capitalize mb-3">
-            {serv.title}
-          </h4>
-          <p class="">{serv.description}</p>
-        </li>
-      ))
-    }
+    {services.map((serv) => <ServiceCard service={serv} />)}
   </ul>
 </section>
