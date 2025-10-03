@@ -9,6 +9,9 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   image: {
-    remotePatterns: [{ protocol: "http", hostname: "localhost" }],
+    remotePatterns: [
+      { protocol: "http", hostname: "localhost" },
+      { protocol: "https", hostname: "placehold.co" },
+    ],
   },
 });

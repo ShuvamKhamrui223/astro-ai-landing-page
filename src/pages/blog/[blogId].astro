@@ -1,6 +1,5 @@
 ---
 import type { GetStaticPaths } from "astro";
-import Heading from "@/components/heading.astro";
 import { getCollection } from "astro:content";
 import { render } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
@@ -34,6 +33,21 @@ const { Content } = await render(blog);
         />
       )
     }
+    <p class="text-lg">
+      Written by <span class="text-emerald-200 hover:text-emerald-600"
+        >{blog.data.author.toString()}</span
+      >
+    </p>
     <Content />
+
+    <div class="my-8 space-x-1.5">
+      {
+        blog.data.categories.map((cat) => (
+          <a href="#" class="px-3 py-2 text-sm bg-emerald-800">
+            {cat}
+          </a>
+        ))
+      }
+    </div>
   </BlogLayout>
 </BaseLayout>
