@@ -21,6 +21,7 @@ const { heroImage, publishDate, title, categories } = data;
         <Image
           src={heroImage}
           alt={title}
+          loading={"lazy"}
           class="object-cover object-center size-full"
           fit="cover"
         />
@@ -29,6 +30,7 @@ const { heroImage, publishDate, title, categories } = data;
           src={"/images/no-image.svg"}
           height={400}
           width={400}
+          loading={"lazy"}
           class="object-cover object-center size-full"
           alt={"no thumbnail"}
         />

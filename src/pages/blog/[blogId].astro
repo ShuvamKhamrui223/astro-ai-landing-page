@@ -20,7 +20,9 @@ export const getStaticPaths = async () => {
 };
 
 const { blog } = Astro.props;
-const { Content } = await render(blog);
+const { Content, headings } = await render(blog);
+
+const { pathname } = Astro.url;
 ---
 
 <BaseLayout title={blog.data.title} description={blog.data.description}>
@@ -32,6 +34,7 @@ const { Content } = await render(blog);
           alt={blog.data.title}
           height={300}
           width={1280}
+          loading={"lazy"}
           class={"rounded-2xl md:h-[40rem] object-cover "}
         />
       )
@@ -58,6 +61,25 @@ const { Content } = await render(blog);
             ))
       }
     </p>
+    <details id="blogToc">
+      <summary
+        class="outline-1 px-3 py-2 rounded-md marker:hidden max-w-5xl first-letter:uppercase mt-3"
+      >
+        on this page
+      </summary>
+      <ul class="flex flex-col gap-2.5">
+        {
+          headings.map((heading) => (
+            <a
+              href={`${pathname}#${heading.slug}`}
+              class={`w-fit ml-${heading.depth} text-gray-${heading.depth * 100} text-lg`}
+            >
+              {heading.text}
+            </a>
+          ))
+        }
+      </ul>
+    </details>
     <Content />
 
     <div class="my-8 space-x-1.5">

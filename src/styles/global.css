@@ -28,7 +28,9 @@ h2 {
 .site__heading {
   @apply text-5xl text-zinc-800 dark:text-zinc-200 max-w-[15ch];
 }
-
+#blogToc > summary {
+  list-style: none;
+}
 h1 > span,
 h2 > span {
   @apply text-emerald-600 dark:text-emerald-400;

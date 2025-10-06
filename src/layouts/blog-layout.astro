@@ -10,12 +10,12 @@ import { LucideArrowLeft } from "@lucide/astro";
   >
 </header>
 <div
-  class="prose prose-xl prose-gray dark:prose-invert dark:prose-ul:text-zinc-400 w-full mx-auto max-w-7xl"
+  class="prose prose-xl prose-gray dark:prose-invert dark:prose-ul:text-zinc-400 w-full mx-auto xl:max-w-7xl"
 >
   <slot />
 </div>
 
-<script is:inline>
+<script>
   const backBtn = document.getElementById("backBtn");
   if (backBtn) backBtn.addEventListener("click", () => history.back());
 </script>
