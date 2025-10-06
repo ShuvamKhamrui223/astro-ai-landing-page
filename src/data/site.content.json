@@ -2,10 +2,10 @@
   "header": {
     "logo": "CONSCIENCE",
     "menu": [
-      { "label": "home", "url": "#home" },
-      { "label": "services", "url": "#services" },
-      { "label": "pricing", "url": "#pricing" },
-      { "label": "blog", "url": "#blog" }
+      { "label": "home", "url": "/#home" },
+      { "label": "services", "url": "/#services" },
+      { "label": "pricing", "url": "/#pricing" },
+      { "label": "blog", "url": "/#blog" }
     ]
   },
   "hero_section": {

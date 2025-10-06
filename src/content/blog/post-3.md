@@ -1,6 +1,8 @@
 ---
 title: "Modern App Design: Trends, Tools, and Time-Savers"
-author: Priya Sharma & Sam Wilson
+author:
+  - Priya Sharma
+  - Sam Wilson
 categories: [App Design, UI/UX, Tools]
 description: Explore the latest trends in app design, essential tools, and automation techniques that help designers stay ahead in a competitive market.
 tags: [app design, trends, figma, adobe xd, automation]

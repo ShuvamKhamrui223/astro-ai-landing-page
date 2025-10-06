@@ -1,12 +1,12 @@
 ---
 title: Essential Keyboard Shortcuts Every Designer Should Memorize
 
-author: Raj Patel
+author:
+  - Raj Patel
 categories: [Design Tools, Productivity, Tips & Tricks]
 description: A cheat sheet of must-know keyboard shortcuts for Figma, Photoshop, Illustrator, and code editors to speed up your workflow.
 tags: [shortcuts, figma, photoshop, Illustrator, productivity]
 heroImage: ""
-
 ---
 
 ## 12. Essential Keyboard Shortcuts Every Designer Should Memorize

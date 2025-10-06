@@ -1,6 +1,8 @@
 ---
 title: The Ultimate Guide to Balancing Multiple Design Projects Efficiently
-author: Taylor Brooks & Ravi Patel
+author:
+  - Taylor Brooks
+  - Ravi Patel
 categories: [Project Management, Freelancing, Design]
 description: Get actionable tips and systems for managing multiple design projects, staying organized, and meeting deadlines without burning out.
 tags: [multitasking, organization, client management, freelancing, kanban]

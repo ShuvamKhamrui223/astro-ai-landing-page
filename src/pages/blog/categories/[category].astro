@@ -1,0 +1,36 @@
+---
+import BlogCard from "@/components/cards/blog-card.astro";
+import Heading from "@/components/heading.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { slugify } from "@/utils/formatter";
+import type { GetStaticPaths } from "astro";
+import { getCollection } from "astro:content";
+
+export const getStaticPaths = (async () => {
+  try {
+    const blogs = await getCollection("blog");
+    const allCategories = new Set(
+      blogs.flatMap((blog) => blog.data.categories || [])
+    );
+    return Array.from(allCategories).map((category) => ({
+      params: { category: slugify(category.toString().replaceAll("/", " ")) },
+      props: { category },
+    }));
+  } catch (error) {
+    return [];
+  }
+}) satisfies GetStaticPaths;
+
+const { category } = Astro.props;
+const postByCategory = await getCollection("blog", ({ data }) =>
+  (data.categories || [])?.includes(category)
+);
+console.log("category " + postByCategory.length);
+---
+
+<BaseLayout title={`blogs of ${category}`}>
+  <Heading title={`blogs of ${category}`} level={2} />
+  <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
+    {postByCategory.map((blog) => <BlogCard blog={blog} />)}
+  </ul></BaseLayout
+>

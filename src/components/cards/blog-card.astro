@@ -3,7 +3,6 @@ import { slugify } from "@/utils/formatter";
 import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
 import { readingTime } from "reading-time-estimator";
-
 interface Props {
   blog: CollectionEntry<"blog">;
 }
@@ -12,7 +11,7 @@ const {
   blog: { data, body },
 } = Astro.props;
 
-const { heroImage, publishDate, title } = data;
+const { heroImage, publishDate, title, categories } = data;
 ---
 
 <li class="bg-zinc-100 dark:bg-zinc-800 flex flex-col rounded-2xl">
@@ -25,7 +24,15 @@ const { heroImage, publishDate, title } = data;
           class="object-cover object-center size-full"
           fit="cover"
         />
-      ) : null
+      ) : (
+        <Image
+          src={"/images/no-image.svg"}
+          height={400}
+          width={400}
+          class="object-cover object-center size-full"
+          alt={"no thumbnail"}
+        />
+      )
     }
   </div>
   <div class="px-4 py-5">

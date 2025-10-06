@@ -1,12 +1,11 @@
 ---
 title: "Modern Web Design: Beyond the Basics with CSS & JavaScript"
-
-author: Derek Kwon
+author:
+  - Derek Kwon
 categories: [Web Development, CSS, JavaScript]
 description: Dive into advanced CSS and JavaScript techniques that enable dynamic, responsive, and engaging modern websites.
 tags: [CSS grid, flexbox, animations, web components, performance]
 heroImage: ""
-
 ---
 
 ## 9. Modern Web Design: Beyond the Basics with CSS & JavaScript

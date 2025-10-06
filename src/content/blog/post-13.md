@@ -1,12 +1,12 @@
 ---
 title: Building a Mindset for Continuous Learning in Tech
 
-author: Liam Carter
+author:
+  - Liam Carter
 categories: [Learning, Career Growth, Tech]
 description: Cultivate a lifelong learning mindset with strategies, habits, and resources for staying current and adaptable in the tech industry.
 tags: [continuous learning, community, side projects, growth, tech trends]
 heroImage: ""
-
 ---
 
 ## 13. Building a Mindset for Continuous Learning in Tech

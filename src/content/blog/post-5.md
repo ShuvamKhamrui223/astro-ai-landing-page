@@ -1,6 +1,7 @@
 ---
 title: Graphics Design Tricks to Make Your Work Stand Out
-author: Maria Gonzalez
+author:
+  - Maria Gonzalez
 categories: [Graphic Design, Creativity, Visual Design]
 description: Master professional tricks for color, typography, and layout that give your graphics a distinctive, polished, and memorable edge.
 tags: [color theory, typography, visual hierarchy, branding, design tips]

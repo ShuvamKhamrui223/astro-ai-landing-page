@@ -1,0 +1,37 @@
+---
+import BlogCard from "@/components/cards/blog-card.astro";
+import Heading from "@/components/heading.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { slugify } from "@/utils/formatter";
+import type { GetStaticPaths } from "astro";
+import { getCollection } from "astro:content";
+
+export const getStaticPaths = (async () => {
+  try {
+    const blogs = await getCollection("blog");
+    const allAuthors = new Set(blogs.flatMap((blog) => blog.data.author || []));
+    console.log(allAuthors);
+
+    return Array.from(allAuthors).map((author) => ({
+      params: { author: slugify(author.toString()) },
+      props: { author },
+    }));
+  } catch (error) {
+    console.log(error);
+    return [];
+  }
+}) satisfies GetStaticPaths;
+
+const { author } = Astro.props;
+const postByCategory = await getCollection("blog", ({ data }) =>
+  (data.author || [])?.includes(author)
+);
+console.log("auhtor " + postByCategory.length);
+---
+
+<BaseLayout title={`blogs of ${author}`}>
+  <Heading level={2} title={`blogs written by ${author}`} />
+  <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
+    {postByCategory.map((blog) => <BlogCard blog={blog} />)}
+  </ul></BaseLayout
+>

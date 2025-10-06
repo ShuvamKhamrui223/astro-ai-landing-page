@@ -1,6 +1,8 @@
 ---
 title: How to Stay Motivated and Productive While Working Remotely
-author: Emma Zhang & Leo Richards
+author:
+  - Emma Zhang
+  - Leo Richards
 categories: [Remote Work, Productivity, Lifestyle]
 description: Build habits and routines that help you stay focused, motivated, and healthy while working from home or any location.
 tags: [remote work, focus, routine, wellness, productivity apps]

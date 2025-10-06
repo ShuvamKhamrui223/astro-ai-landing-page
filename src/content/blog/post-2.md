@@ -1,6 +1,7 @@
 ---
 title: How to Boost Your Productivity as a Creative Developer
-author: Alex Chen
+author:
+  - Alex Chen
 categories: [Productivity, Development, Self-Improvement]
 description: Learn practical strategies and habits that creative developers use to maintain focus, minimize distractions, and maximize daily output.
 tags: [productivity, remote work, time management, developer habits, focus]

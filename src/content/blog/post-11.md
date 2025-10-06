@@ -1,6 +1,7 @@
 ---
 title: "App Design: UI Patterns That Improve User Engagement"
-author: Nina Dubois
+author: 
+- Nina Dubois
 categories: [App Design, UI/UX, User Engagement]
 description: Discover UI patterns and best practices that enhance user engagement, retention, and satisfaction in mobile and web apps.
 tags: [onboarding, navigation, micro-interactions, accessibility, notifications]

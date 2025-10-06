@@ -1,6 +1,7 @@
 ---
 title: Self-Improvement Habits for Designers Who Want to Level Up
-author: Jordan Lee
+author:
+  - Jordan Lee
 categories: [Self-Improvement, Design, Career Growth]
 description: Cultivate habits that lead to continuous improvement, networking, and career success as a designer in a fast-changing industry.
 tags: [growth mindset, learning, mentorship, career, designer habits]

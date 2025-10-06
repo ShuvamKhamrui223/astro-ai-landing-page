@@ -1,11 +1,11 @@
 ---
 title: "Breaking Creative Blocks: Habits for Consistent Output"
-author: Sofia Bennett  
-categories: [Creativity, Productivity, Mental Health  ]
-description: Overcome creative blocks with practical habits, mindset shifts, and tools that keep your ideas flowing and your output consistent.  
+author:
+  - Sofia Bennett
+categories: [Creativity, Productivity, Mental Health]
+description: Overcome creative blocks with practical habits, mindset shifts, and tools that keep your ideas flowing and your output consistent.
 tags: [creativity, inspiration, mindfulness, sketch, mental health]
 heroImage: ""
-
 ---
 
 ## 8. Breaking Creative Blocks: Habits for Consistent Output

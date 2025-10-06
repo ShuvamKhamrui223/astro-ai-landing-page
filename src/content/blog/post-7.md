@@ -1,11 +1,11 @@
 ---
 title: Tech Hacks for Automating Repetitive Design Tasks
-author: Chris Martin
+author:
+  - Chris Martin
 categories: [Automation, Design Tools, Efficiency]
 description: Leverage plugins, scripts, and tools to automate boring, repetitive tasks and free up your time for creative work.
 tags: [automation, plugins, photoshop actions, batch processing, efficiency]
 heroImage: ""
-
 ---
 
 ## 7. Tech Hacks for Automating Repetitive Design Tasks
